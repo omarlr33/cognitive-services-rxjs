@@ -7,7 +7,7 @@
 `npm i cognitive-services-rxjs --save`
 
 ## API Documentation
-[API Microsoft® Documentation](https://dev.projectoxford.ai/docs/services/56332331778daf02acc0a50b/operations/565d9001ca73072048922d97)
+[API Microsoft® Documentation](https://docs.microsoft.com/en-us/azure/cognitive-services/)
 ## Usage
 * [Computer Vision](#computer-vision)
 	* [Analyze Image](#) `Partial`
@@ -40,7 +40,7 @@
 
 ```javascript
 
-const cognitiviveServicesRxjs = require('cognitive-services-rxjs');
+const cognitiviveServicesRxjs = require('cognitive-services-rxjs')
 
 const computerVision = cognitiviveServicesRxjs.computerVision({
 api_key : 'your_api_key',
@@ -49,7 +49,7 @@ endpoint: 'your_endpoint_api' //https://[location].api.cognitive.microsoft.com/v
 
 var parameters = { visualFeatures: 'Categories'} //Optional
 var body = {
-    {url:'\\url_image'}
+    url:'\\url_image'
 }
 
 computerVision.analyzeImage({parameters,body}).subscribe(
@@ -62,7 +62,8 @@ error=> console.log(`Something  Gone wrong :( - ${error}`))
 
 ```javascript
 
-const cognitiviveServicesRxjs = require('cognitive-services-rxjs');
+const cognitiviveServicesRxjs = require('cognitive-services-rxjs')
+const fs = require("fs")
 
 const computerVision = cognitiviveServicesRxjs.computerVision({
 api_key : 'your_api_key',
@@ -87,7 +88,7 @@ error=> console.log(`Something  Gone wrong :( - ${error}`))
 
 ```javascript
 
-const cognitiviveServicesRxjs = require('cognitive-services-rxjs');
+const cognitiviveServicesRxjs = require('cognitive-services-rxjs')
 
 const computerVision = cognitiviveServicesRxjs.computerVision({
 api_key : 'your_api_key',
@@ -95,7 +96,7 @@ endpoint: 'your_endpoint_api' //https://[location].api.cognitive.microsoft.com/v
 })
 
 var body = {
-    {url:'\\url_image'}
+    url:'\\url_image'
 }
 
 computerVision.tagImage({body}).subscribe(
@@ -108,7 +109,8 @@ error=> console.log(`Something  Gone wrong :( - ${error}`))
 
 ```javascript
 
-const cognitiviveServicesRxjs = require('cognitive-services-rxjs');
+const cognitiviveServicesRxjs = require('cognitive-services-rxjs')
+const fs = require("fs")
 
 const computerVision = cognitiviveServicesRxjs.computerVision({
 api_key : 'your_api_key',
